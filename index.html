@@ -10,274 +10,139 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="topbar">
   <a class="brand" href="#" data-page="home">
-    <span class="brand-mark">✦</span>
+    <span class="brand-symbol">✦</span>
     <span><strong>WIZARDING</strong><small>ARCHIVE</small></span>
   </a>
-
-  <nav class="main-nav">
-    <button class="nav-link active" data-page="home">Strona główna</button>
-    <button class="nav-link" data-page="creator">Kreator KP</button>
-    <button class="nav-link" data-page="encyclopedia">Encyklopedia</button>
+  <nav id="mainNav">
+    <button class="nav-link active" data-page="home" data-i18n="navHome">Strona główna</button>
+    <button class="nav-link" data-page="creator" data-i18n="navCreator">Kreator KP</button>
+    <button class="nav-link" data-page="encyclopedia" data-i18n="navEncyclopedia">Encyklopedia</button>
   </nav>
-
   <div class="top-actions">
-    <button class="language-toggle" id="languageToggle">EN</button>
-    <button class="icon-button" id="themeToggle">☼</button>
-    <button class="menu-toggle" id="menuToggle">☰</button>
+    <button class="small-button" id="languageToggle">EN</button>
+    <button class="small-button" id="themeToggle" aria-label="Zmień motyw">☼</button>
+    <button class="small-button menu-button" id="menuToggle">☰</button>
   </div>
 </header>
 
 <main>
-
-  <!-- STRONA GŁÓWNA -->
   <section class="page active" id="page-home">
     <div class="hero">
       <div class="hero-copy">
-        <div class="eyebrow">✧ CENTRUM WIEDZY I INSPIRACJI ✧</div>
-
-        <h1>Stwórz postać,<br><em>która ma swoją historię.</em></h1>
-
-        <p class="hero-description">
-          Miejsce, które pomaga dobierać informacje do karty postaci
-          i poznawać czarodziejski świat bez zgadywania i mieszania
-          kanonu z fanowskimi pomysłami.
-        </p>
-
-        <div class="hero-buttons">
-          <button class="button button-primary" data-go="creator">
-            ✧ Zacznij tworzyć KP
-          </button>
-          <button class="button button-quiet" data-go="encyclopedia">
-            Odkryj encyklopedię ↗
-          </button>
+        <div class="eyebrow">✧ THE WIZARDING WORLD ✧</div>
+        <h1 data-i18n="heroTitle">Twoja postać.<br><em>Twoja historia.</em></h1>
+        <p data-i18n="heroText">Poznaj świat czarodziejów, sprawdzaj informacje i dobieraj elementy karty postaci RP zgodnie z kanonem Harry'ego Pottera.</p>
+        <div class="hero-actions">
+          <button class="button primary" data-go="creator" data-i18n="startCreator">✧ Otwórz kreator KP</button>
+          <button class="button secondary" data-go="encyclopedia" data-i18n="openEncyclopedia">Przeglądaj encyklopedię →</button>
         </div>
-
-        <div class="hero-note">
-          ✦ Priorytet: zgodność z oficjalnym kanonem.
-        </div>
+        <p class="hero-footnote">✦ <span data-i18n="canonPromise">Kanon oddzielony od inspiracji fanowskich.</span></p>
       </div>
-
-      <div class="hero-art">
-        <div class="orbit orbit-a"></div>
-        <div class="orbit orbit-b"></div>
-        <div class="book-glow"></div>
-
-        <div class="book">
-          <div class="book-spine"></div>
-          <div class="book-cover">
-            <div class="cover-border"></div>
-            <div class="cover-symbol">✦</div>
-            <div class="cover-line"></div>
-            <div class="cover-title">
-              WIZARDING<br><small>ARCHIVE</small>
-            </div>
-            <div class="cover-subtitle">
-              A GUIDE TO THE<br>WIZARDING WORLD
-            </div>
-            <div class="cover-bottom">✧</div>
+      <div class="hero-visual">
+        <div class="magic-ring ring-one"></div>
+        <div class="magic-ring ring-two"></div>
+        <div class="magic-book">
+          <div class="book-inner">
+            <span>✧</span>
+            <b>WIZARDING</b>
+            <small>ARCHIVE</small>
+            <i>✦</i>
           </div>
-          <div class="book-pages"></div>
         </div>
-
-        <div class="floating-spark spark-a">✧</div>
-        <div class="floating-spark spark-b">✦</div>
-        <div class="floating-spark spark-c">·</div>
+        <span class="star star-one">✧</span>
+        <span class="star star-two">✦</span>
+        <span class="star star-three">·</span>
       </div>
     </div>
 
     <div class="section-heading">
-      <div>
-        <div class="eyebrow small">ODKRYWAJ</div>
-        <h2>Co możesz tutaj zrobić?</h2>
-      </div>
-      <p>
-        Wybierz, czego potrzebujesz. Możesz korzystać z podpowiedzi
-        albo samodzielnie przeglądać zebrane informacje.
-      </p>
+      <div><div class="eyebrow" data-i18n="discover">DISCOVER</div><h2 data-i18n="whatCanYouDo">Co tutaj znajdziesz?</h2></div>
+      <p data-i18n="homeIntro">Wybieraj informacje, poznawaj zasady świata i zapisuj pomysły na swoją postać.</p>
     </div>
-
-    <div class="feature-grid">
-      <button class="feature-card" data-go="creator">
-        <span class="feature-icon">✧</span>
-        <span class="feature-number">01 / CREATE</span>
-        <strong>Kreator KP</strong>
-        <span>Dobieraj imię, dom, różdżkę, cechy charakteru i historię.</span>
-        <span class="card-arrow">↗</span>
-      </button>
-
-      <button class="feature-card" data-go="encyclopedia">
-        <span class="feature-icon">⌘</span>
-        <span class="feature-number">02 / KNOWLEDGE</span>
-        <strong>Encyklopedia</strong>
-        <span>Sprawdzaj informacje o Hogwarcie, różdżkach i świecie magii.</span>
-        <span class="card-arrow">↗</span>
-      </button>
-
-      <button class="feature-card" data-go="encyclopedia">
-        <span class="feature-icon">⌕</span>
-        <span class="feature-number">03 / DISCOVER</span>
-        <strong>Wyszukiwarka</strong>
-        <span>Szukaj haseł i przechodź do powiązanych tematów.</span>
-        <span class="card-arrow">↗</span>
-      </button>
+    <div class="home-grid">
+      <button class="home-card" data-go="creator"><span>✧</span><small>01 / CREATE</small><b data-i18n="homeCard1">Kreator karty postaci</b><p data-i18n="homeCard1Text">Dobieraj wszystkie najważniejsze elementy swojej KP.</p><i>↗</i></button>
+      <button class="home-card" data-go="encyclopedia"><span>⌘</span><small>02 / KNOWLEDGE</small><b data-i18n="homeCard2">Encyklopedia</b><p data-i18n="homeCard2Text">Sprawdzaj wiedzę o Hogwarcie, różdżkach i świecie magii.</p><i>↗</i></button>
+      <button class="home-card" data-go="creator"><span>✎</span><small>03 / YOUR IDEAS</small><b data-i18n="homeCard3">Twoje notatki</b><p data-i18n="homeCard3Text">Zapisuj pomysły i wracaj do nich, kiedy chcesz.</p><i>↗</i></button>
     </div>
-
-    <div class="truth-banner">
-      <span class="truth-icon">✦</span>
-      <div>
-        <strong>Najpierw prawda, potem inspiracja.</strong>
-        <p>
-          Jeśli oficjalne źródła nie podają jakiejś informacji,
-          oznaczymy ją jako nieustaloną. Nie będziemy przedstawiać
-          fanowskich teorii jako faktów.
-        </p>
-      </div>
-    </div>
+    <div class="notice"><span>✦</span><div><b data-i18n="truthTitle">Najpierw kanon, potem inspiracja.</b><p data-i18n="truthText">Nieustalone informacje oznaczamy jako nieustalone. Własne pomysły są wyraźnie oddzielone od faktów z książek i oficjalnych materiałów.</p></div></div>
   </section>
 
-  <!-- KREATOR KP -->
   <section class="page" id="page-creator">
-    <div class="page-intro">
-      <div class="eyebrow small">TWOJA POSTAĆ, TWOJE DECYZJE</div>
-      <h1>Kreator <em>karty postaci</em></h1>
-      <p>
-        Skorzystaj z prowadzących pytań albo przeglądaj inspiracje
-        samodzielnie. To Ty decydujesz, co trafi do KP.
-      </p>
+    <div class="page-heading">
+      <div class="eyebrow" data-i18n="creatorEyebrow">CHARACTER WORKSHOP</div>
+      <h1 data-i18n="creatorTitle">Kreator <em>karty postaci</em></h1>
+      <p data-i18n="creatorIntro">Wybierz dział, poznaj dostępne informacje i dodaj wybrane elementy do swojego roboczego zestawu KP.</p>
     </div>
 
-    <div class="mode-switch">
-      <button class="mode-button active" data-mode="guided">
-        ✧ Pomóż mi wybrać
-      </button>
-      <button class="mode-button" data-mode="browse">
-        ☷ Przeglądaj samodzielnie
-      </button>
-    </div>
+    <div class="creator-layout">
+      <aside class="sidebar">
+        <div class="sidebar-label" data-i18n="yourProfile">TWOJA KARTA</div>
+        <div id="categoryMenu" class="category-menu"></div>
+        <div class="sidebar-tip"><span>✧</span><p data-i18n="sidebarTip">Nie musisz wypełniać wszystkiego naraz. Twoje wybory zapisują się automatycznie.</p></div>
+      </aside>
 
-    <div id="guidedPanel" class="creator-panel">
-      <div class="panel-title">
-        <div>
-          <div class="eyebrow small">PODPOWIEDZI KROK PO KROKU</div>
-          <h2>Od czego zaczynamy?</h2>
+      <div class="workspace">
+        <div class="workspace-top">
+          <div><div class="eyebrow" id="categoryEyebrow">01 / IDENTITY</div><h2 id="categoryTitle">Imię i nazwisko</h2></div>
+          <span class="step-indicator" id="stepIndicator">01 / 09</span>
         </div>
-        <span class="step-count" id="stepCount">01 / 05</span>
-      </div>
-
-      <div class="progress-track">
-        <span id="progressBar"></span>
-      </div>
-
-      <div class="guide-content">
-        <div class="guide-question" id="guideQuestion"></div>
-        <div class="guide-options" id="guideOptions"></div>
-
-        <div class="guide-controls">
-          <button class="button button-quiet" id="prevStep" disabled>
-            ← Wstecz
-          </button>
-          <button class="button button-primary" id="nextStep">
-            Dalej →
-          </button>
-        </div>
-
-        <p class="helper-note">
-          Podpowiedzi są inspiracją, nie gotową odpowiedzią.
-          Sprawdzaj zgodność z zasadami swojego serwera RP.
-        </p>
-      </div>
-    </div>
-
-    <div id="browsePanel" class="creator-panel hidden">
-      <div class="panel-title">
-        <div>
-          <div class="eyebrow small">KATALOG INSPIRACJI</div>
-          <h2>Wybierz interesujący Cię dział</h2>
+        <div class="progress-line"><span id="categoryProgress"></span></div>
+        <p class="category-description" id="categoryDescription"></p>
+        <div id="categoryContent"></div>
+        <div class="workspace-bottom">
+          <button class="button secondary" id="previousCategory">← <span data-i18n="previous">Poprzedni</span></button>
+          <button class="button primary" id="nextCategory"><span data-i18n="next">Następny</span> →</button>
         </div>
       </div>
-      <div class="browse-grid" id="browseGrid"></div>
+
+      <aside class="summary-panel">
+        <div class="eyebrow" data-i18n="livePreview">LIVE PREVIEW</div>
+        <h3 data-i18n="yourChoices">Twoje wybory</h3>
+        <p class="summary-hint" data-i18n="summaryHint">Tutaj pojawiają się informacje, które wybierzesz w kreatorze.</p>
+        <div id="selectionSummary"></div>
+        <button class="button secondary full-button" id="copySummary" data-i18n="copySummary">Kopiuj podsumowanie</button>
+        <button class="text-button full-button" id="resetSelections" data-i18n="clearSelections">Wyczyść wybory</button>
+      </aside>
     </div>
 
-    <div class="notes-panel">
-      <div class="eyebrow small">TWOJE NOTATKI</div>
-      <h3>Zapisz pomysły do KP</h3>
-      <p>Notatki zapisują się lokalnie w tej przeglądarce.</p>
-
-      <textarea id="characterNotes"
-        placeholder="Zapisz tutaj swoje pomysły..."></textarea>
-
-      <div class="notes-footer">
-        <span id="saveStatus">Zapisywanie lokalne</span>
-        <button class="text-button" id="clearNotes">
-          Wyczyść notatki
-        </button>
-      </div>
-    </div>
+    <section class="notes-section">
+      <div><div class="eyebrow" data-i18n="personalNotes">PERSONAL NOTES</div><h2 data-i18n="notesTitle">Notatki do postaci</h2><p data-i18n="notesDescription">Tutaj możesz zapisywać własne pomysły, które nie pasują do żadnego działu.</p></div>
+      <textarea id="characterNotes" data-placeholder="notesPlaceholder" placeholder="Twoje pomysły..."></textarea>
+      <div class="notes-bottom"><span id="saveStatus">Zapisano lokalnie</span><button class="text-button" id="clearNotes" data-i18n="clearNotes">Wyczyść notatki</button></div>
+    </section>
   </section>
 
-  <!-- ENCYKLOPEDIA -->
   <section class="page" id="page-encyclopedia">
-    <div class="page-intro">
-      <div class="eyebrow small">WIEDZA O ŚWIECIE CZARODZIEJÓW</div>
-      <h1>Encyklo<em>pedia</em></h1>
-      <p>
-        Przeglądaj hasła i sprawdzaj informacje przydatne podczas
-        tworzenia postaci. Zaznaczamy, co jest potwierdzone,
-        a co pozostaje nieustalone.
-      </p>
+    <div class="page-heading">
+      <div class="eyebrow">THE WIZARDING WORLD</div>
+      <h1 data-i18n="encyclopediaTitle">Encyklo<em>pedia</em></h1>
+      <p data-i18n="encyclopediaIntro">Wiedza potrzebna do tworzenia postaci. Przeglądaj tematy lub wyszukaj konkretne hasło.</p>
     </div>
-
-    <div class="search-wrap">
-      <span>⌕</span>
-      <input id="encyclopediaSearch" type="search"
-        placeholder="Szukaj hasła, np. różdżka, Hogwart...">
-      <kbd>ENTER</kbd>
-    </div>
-
-    <div class="category-tabs" id="categoryTabs">
-      <button class="category-tab active" data-category="all">Wszystkie</button>
-      <button class="category-tab" data-category="wand">Różdżki</button>
-      <button class="category-tab" data-category="school">Hogwart</button>
-      <button class="category-tab" data-category="houses">Domy</button>
-      <button class="category-tab" data-category="world">Świat magii</button>
-    </div>
-
-    <div class="article-grid" id="articleGrid"></div>
-
-    <div class="source-note">
-      ⓘ
-      <span>
-        To początkowa, niewielka baza. Rozbudowane hasła należy
-        sprawdzać w książkach i oficjalnych materiałach Wizarding World.
-      </span>
-    </div>
+    <div class="search-box"><span>⌕</span><input id="searchInput" data-placeholder="searchPlaceholder" placeholder="Szukaj: różdżka, Hogwart, Ravenclaw..."><button id="clearSearch">×</button></div>
+    <div id="encyclopediaFilters" class="filter-row"></div>
+    <div id="encyclopediaResults" class="article-grid"></div>
+    <div class="source-disclaimer"><b>ⓘ</b><span data-i18n="sourceDisclaimer">Baza jest punktem wyjścia. W przypadku szczegółowych informacji sprawdzaj książki i oficjalne materiały Wizarding World. Nie traktuj fanowskich interpretacji jako kanonu.</span></div>
   </section>
-
 </main>
 
 <footer class="footer">
-  <a class="brand footer-brand" href="#" data-page="home">
-    <span class="brand-mark">✦</span>
-    <span><strong>WIZARDING</strong><small>ARCHIVE</small></span>
-  </a>
-  <span>Niezależny projekt fanowski. Nie jest oficjalną stroną Wizarding World.</span>
+  <a class="brand" href="#" data-page="home"><span class="brand-symbol">✦</span><span><strong>WIZARDING</strong><small>ARCHIVE</small></span></a>
+  <span data-i18n="footerText">Niezależny projekt fanowski. Nie jest oficjalną stroną Wizarding World.</span>
   <span>✧ 2026</span>
 </footer>
 
-<div class="toast" id="toast"></div>
-
-<div class="modal-backdrop" id="articleModal">
-  <div class="modal">
-    <button class="modal-close" id="closeModal">×</button>
-    <span class="eyebrow small" id="modalCategory"></span>
+<div id="toast" class="toast"></div>
+<div id="articleModal" class="modal-backdrop">
+  <article class="modal">
+    <button class="modal-close" id="modalClose">×</button>
+    <div class="eyebrow" id="modalCategory"></div>
     <h2 id="modalTitle"></h2>
-    <div class="canon-label">✦ Informacja kanoniczna / opis źródłowy</div>
-    <p id="modalBody"></p>
-    <div class="modal-caveat" id="modalCaveat"></div>
-  </div>
+    <div class="canon-tag" id="modalStatus"></div>
+    <div id="modalBody" class="modal-body"></div>
+    <div id="modalNote" class="modal-note"></div>
+  </article>
 </div>
 
 <script src="script.js"></script>
